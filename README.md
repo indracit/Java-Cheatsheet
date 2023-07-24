@@ -2228,32 +2228,34 @@ public class C {
 # 32.  Polymorphism & dynamic method dispatch
 
 
--- two types of polymorphism 
--- compile time polymorphism and Run time polymorphism
--- when you compile the file and you will know what things get executed this behaviour is knows as compile time polymorphism.
--- when behaviour decide at run time this is known as run time polymorphism.
--- add(int, int) , add(int, int, int) decided at compile time 
+- two types of polymorphism 
+- compile time polymorphism and Run time polymorphism
+- when you compile the file and you will know what things get executed this behaviour is knows as compile time polymorphism.
+- when behaviour decide at run time this is known as run time polymorphism.
+- add(int, int) , add(int, int, int) decided at compile time 
 - class A extends B  -- A class  has add(int, int) and B has add(int,int ) out of this two we can decide which can execute at run time then this is called run time polymorphism example.
 
--- suppose we have some class A , B and C
--- class B and C extends A 
--- in All three class we have show() method 
--- main() method of Demo we create object of A, B and C but we create only reference of A which can hold
+- suppose we have some class A , B and C
+- class B and C extends A 
+- in All three class we have show() method 
+- main() method of Demo we create object of A, B and C but we create only reference of A which can hold
 object of A, B and C .
+
+```java
 class A{
 public void show(){
-    Systeem.out.println("in show A");
+    System.out.println("in show A");
 }
 }
 class B extends A{
 public void show(){
-    Systeem.out.println("in show B");
+    System.out.println("in show B");
 }
 }
 
 class C extends A{
 public void show(){
-    Systeem.out.println("in show C");
+    System.out.println("in show C");
 }
 }
 
@@ -2272,9 +2274,10 @@ public class Demo{
     }
 }
 
+```
 Note: during compile time we donot which show() method is called from which class.
-    -- we can know during run time which show method is called this is known as run time polymorphism.
-    -- all this concept is class dynamic method dispatch
+- we can know during run time which show method is called this is known as run time polymorphism.
+- all this concept is class dynamic method dispatch
 
 
 <br/>
@@ -2286,11 +2289,13 @@ Note: during compile time we donot which show() method is called from which clas
 
 # 33. final keyword 
 
--- final keyword use with variable , methods and class
--- if make a variable final then variable become constant
+- final keyword use with variable , methods and class
+- if make a variable final then variable become constant
+
+```java
 final int a=5;
 //you cannot reassign a value to a
--- final class 
+//final class 
 class A{
 public void show(){
 System.out.println("In Calc show);
@@ -2301,10 +2306,12 @@ public void add(int a,int b){
 }
 }
 
+```
 Suppose someone want to extend your class , but we want to stop inheritance then we need to make final
--- if you make class final then no one can inherite your class
--- but you can use the final class by making object of final class
+- if you make class final then no one can inherite your class
+- but you can use the final class by making object of final class
 
+```java
 class A{
     public final void show(){
         System.out.print("IN A");
@@ -2316,7 +2323,8 @@ class B extends A{
     //since show method is final
 }
 
--- if you make method as final no one can override your method.
+```
+- if you make method as final no one can override your method.
 
 
 <br/>
@@ -2327,29 +2335,33 @@ class B extends A{
 
 # 34. Object class - equals(), toString() , hashCode()
 
--- every class in java inherit object class
--- in this lecture we see some member method of object class
+- every class in java inherit object class
+- in this lecture we see some member method of object class
 
+```java
   public native int hashCode();
   public boolean equals( Object);
   public  String toString();
+```
 
-1)hashCode() method:
+1) hashCode() method:
 In Java, the hashCode () method is a method that is defined in the Object class, 
 which is the parent class of all classes in Java. It returns an integer value that 
 represents the unique hash code of an object.
 
-2)equals(Object) method:
+2) equals(Object) method:
 equals(Object obj) is the method of Object class. This method is used to compare 
 the given objects. It is suggested to override equals(Object obj) method to get our own equality condition on Objects.
 
-3)toString() method:
+3) toString() method:
 We typically generally do use the toString() method to get the string representation of an object. It is very important 
 and readers should be aware that whenever we try to print the object reference then internally toString() method is invoked. 
 If we did not define the toString() method in your class then the Object class toString() method is invoked otherwise our 
 implemented or overridden toString() method will be called.
 
 case 1: class which not override object class toString(), hashCode(), equals() method
+
+```java
 class Mobile{
     String model;
     int price;
@@ -2379,8 +2391,11 @@ class Main{
        System.out.println(mb2.hashCode());  //918221580 , provide some unique value 
     }
 }
+```
 
 case 2: class can override object class hashCode(), toString(), equals()
+
+```java
 class Mobile{
     String model;
     int price;
@@ -2444,6 +2459,7 @@ class Main{
        System.out.println(mb1==mb2); 
     }
 }
+```
 
 Note: it is not mandatory to override every member method of object class but it is advice able 
 to override toString() and equals() method to compare and print own object.
@@ -2459,17 +2475,20 @@ to override toString() and equals() method to compare and print own object.
 
 typecasting is way to converting one primitive data type into other data type using implicit or explicit type
 conversion.
+```java
 double d=4.5;
 int i=(int)d; //explicit typecasting 
 
 int i1=5;
 double d1=i1; //implicit type conversion
+```
 
 When we are talking about non -primitive data type we have concept of upcasting and downcasting
 condition for upcasting and downcasting:
--- for that two class should have some parents child  relationship 
--- if non-primitive data type have no any relationship so, upcasting and downcasting is not possible.
+- for that two class should have some parents child  relationship 
+- if non-primitive data type have no any relationship so, upcasting and downcasting is not possible.
 
+```java
 class A{
     public void show1(){
         System.out.println("In show A)
@@ -2494,6 +2513,7 @@ class Demo{
     }
 }
 
+```
 Note:
 the object can also be typecasted like the datatypes. Parent and Child objects are two types of objects. 
 So, there are two types of typecasting possible for an object, i.e., Parent to Child and Child to Parent or can say Upcasting and Downcasting.
@@ -2525,37 +2545,39 @@ double -Double
 float -Float 
 boolean -Boolean
 
-Boxing:It is manual method to convert primitive type data into non-primitive type .
-e.g 
-int num=7;
-Integer num1=new Integer(8); //boxing
-
-UnBoxing: It is manual method to convert non-primitive data type to primitive type.
-e.g
-int num2=num1.intValue(); //unboxing
-
-AutoBoxing:It is automatic conversion of primitive type data into non-primitive data type.
-int num3=5;
-Integer num4=num3; //autoboxing
-
-AutoUnBoxing:It is automatic conversion of non primitive type data into primitive data type.
-int num5=num4; //autounboxing
+```java
+// Boxing:It is manual method to convert primitive type data into non-primitive type .
 
 int num=7;
-how to store data as Object
-Integer num1=new Integer(8); //this syntax is depreciated 
-Integer num1=Integer.valueOf(8); //Now we use this syntax
-Integer num1=8; //autoboxing 
+Integer num1 = new Integer(8); //boxing
+
+// UnBoxing: It is manual method to convert non-primitive data type to primitive type.
+
+int num2 = num1.intValue(); //unboxing
+
+// AutoBoxing:It is automatic conversion of primitive type data into non-primitive data type.
+int num3 = 5;
+Integer num4 = num3; //autoboxing
+
+// AutoUnBoxing:It is automatic conversion of non primitive type data into primitive data type.
+int num5 = num4; //autounboxing
+
+int num=7;
+// how to store data as Object
+Integer num1 = new Integer(8); //this syntax is depreciated 
+Integer num1 = Integer.valueOf(8); //Now we use this syntax
+Integer num1 = 8; //autoboxing 
 int num2=num1.intValue();//unboxing 
 int num3=num1; //autounboxing 
 
---convert string into int type using parseInt
-String str="12";
-int num4=Integer.parseInt(str); 
+// --convert string into int type using parseInt
+String str = "12";
+int num4 = Integer.parseInt(str); 
 
---Convert number into String 
-String str1=Integer.toString(23); //convert number into string
+// --Convert number into String 
+String str1 = Integer.toString(23); //convert number into string
 
+```
 
 <br/>
 
@@ -2566,10 +2588,8 @@ String str1=Integer.toString(23); //convert number into string
 
 # 37. abstract class and methods
 
-#1
 Abstraction is a process of hiding the implementation details and showing only functionality to the user.
 
-#2
 Abstract method:-
 - Instead of defining the method, we can declare the method.
 - If we put a semicolon at the end of a method, it means that you only declare the method like:
@@ -2577,7 +2597,6 @@ Abstract method:-
 - This method does not contain any features and you will not be able to create an object of it.
 - You need to add an abstract keyword to only declare a method.
 
-#3
 Abstract class:-
 - Abstract methods can only be defined in an abstract class.
 - We need to add an abstract keyword before a class to make it an abstract class.
@@ -2587,7 +2606,6 @@ Abstract class:-
 - Abstract class can have an abstract or a normal method or both.
 - An abstract class can have more than one abstract method.
 
-#4
 Concrete class: A class other than an abstract class is known as a concrete class.
 - An object of a concrete class can be created.
 
@@ -2601,28 +2619,31 @@ Concrete class: A class other than an abstract class is known as a concrete clas
 
 # 38. Inner class & anonymous inner class
 
-#1
 Inner Class:-
 - We can also create a class inside another class.
+
+```java
  class A
  { 
   class B
   {
   }
  }
+```
+
 - You can call the method of class B by using the dot operator in between both classes A and B.
  A.B obj= new B();
 -  A dollar sign will be introduced in a class name that has an inner class indicating two different classes.
  A$B. class
 - You also need to create an object of the outer class, to call the methods of an inner class.
 
-#2
+
 Static Inner Class:-
 - An inner class can also be declared as static.
 - When an inner class is declared as static, then you do not need to create an object for it.
 - But an outer class can not be made static.
 
-#3
+
 Advantage of inner class:-
 - Nested classes represent a particular type of relationship that is it can access all the members of the outer class, including private.
 - Nested classes make the code more readable and maintainable.
@@ -2633,20 +2654,21 @@ Advantage of inner class:-
 - We can avoid the overriding and do not need to create a new class for this particular task.
 - We can use the inner class concept to give a new implementation of a method.
 
-#2
 - We can create a new anonymous inner class after creating an object of a class that contains the method.
 - We do not need to use a class keyword with an anonymous inner class.
 - It just starts with braces and contains the method and its new implementation.
 - Anonymous inner class starts just the creation of an object and ends with the semicolon of that object.
-e.g., A obj=new A()
+
+```java
+ A obj = new A()
   {
    public void show()
    {
-    new statement;
+    // new statement;
    }
   };
+```
 
-#3
 - Anonymous class used in the interface, functional interface, lambda expressions.
 - Anonymous inner class can implement only one interface at s time.
 - It can either extend a class or implement an interface at a time.
@@ -2667,7 +2689,8 @@ When you want to use an interface and an abstract class only once, then you can 
 - Anonymous inner class can implement only one interface at s time.
 - Anonymous inner class can either extend a class or implement an interface at a time.
 - We can create object for abstract class by providing the implementation of an abstract method in an anonymous inner class.
-e.g.,
+
+```java
 abstract class A
 {
  public abstract void show();
@@ -2682,6 +2705,7 @@ A obj=new A()
  }
 };
 
+```
 <br/>
 
 > [top](#java-cheatsheet)
@@ -2699,28 +2723,32 @@ In an abstract class, we can have both abstract methods as well as normal or con
 - We cannot instantiate an interface.
 - Interface only shows the design and it does not provide any implementation.
 - To provide an implementation of methods, you need to create a class and instantiate it also.
-e.g,
+
+```java
+
  interface A
  {
   methods()----
  }
+```
 
-#2
 implements keyword:-
 To implement an interface, we use the keyword - implements.
 - If you use the implements keyword with class, then it is compulsory to give an implementation of all the methods that are defined in an interface.
 - If you do not give an implementation of all methods then it will make your class an abstract class by default.
 - So, to make a concrete class, you have to give the implementation of all methods present in an interface.
-e.g., 
+
+
+```java
  class B implements A
  {
   methods() {
-   statement;
+//    statement;
   }
-  ------
+//   ------
  }
+```
 
-#3
 Variables in an interface:-
 - We can call the methods of an interface by creating an object of the class that implements an interface.
 - We can also declare variables in an interface.
@@ -2743,10 +2771,13 @@ e.g., A.area;    (here, area is a variable initialized in an interface)
 - We can compare the status or values of an enum by using the if- else condition.
 - Switch supports string, integer etc, and it also support enum.
 - In switch() you need to pass an object reference variable as a parameter.
-e.g., 
+
+
+```java
 enum Status{
  Running, Failed, Pending, Success;
 }
+
 if(s==Status.Running)
       System.out.println("All Good");
      else if(s==Status.Failed)
@@ -2756,9 +2787,11 @@ if(s==Status.Running)
      else
       System.out.println("Done");
      
+```
 
 -  In switch case, we do not have to pass the object refernce variable again and again. We have to only pass the constant itself.
-e.g., 
+
+```java
 Status s=Status.Pending;     
      switch(s)
      {
@@ -2779,7 +2812,8 @@ Status s=Status.Pending;
        break;
      }
 
-     #1
+```
+    
 - We can not extend the enum with any other class.
 - We can define constructors and methods in an enum. Creation of our constructors and variables is also possible in an enum.
 - We can also define our data types through enum that are known as Enumerated Data Types.
@@ -2788,9 +2822,9 @@ Status s=Status.Pending;
  Status s= Status.Success;
  System.out.println(s.getClass().getSuperclass());
 - In an enum, every enum constant represents an object of type enum.
-
-#2 
+ 
 Enum and Constructor:
+
 - enum contains a constructor and it is executed separately for each enum constant at the time of enum class loading.
 - We can create a constructor in an enum that can take any parameter, and that value of a parameter might be different in every object of an enum.
 - Instance variables in an enum are private and we can access them in another class by using getters and setters.
@@ -2807,21 +2841,20 @@ Enum and Constructor:
 # 42. Anotations , Functional interface and lambda expression with return type
 
 What is Annotations?
--- annotation is type of comment which is used to provide meta data to the compiler and JVM about the program.
+- annotation is type of comment which is used to provide meta data to the compiler and JVM about the program.
 
 Basic difference between comment and annotations
--- annotation is used to provide meta data to the compiler and JVM about the program but comment is used to provide information to the programmer.
+- annotation is used to provide meta data to the compiler and JVM about the program but comment is used to provide information to the programmer.
 
-2)
 What does annotations provide to program and what does for program?
--- Annotations are used to provide supplemental information about a program. 
--- Annotations start with ‘@’.
--- Annotations do not change the action of a compiled program.
--- Annotations help to associate metadata (information) to the program elements i.e. instance variables, constructors, methods, classes, etc.
--- Annotations are not pure comments as they can change the way a program is treated by the compiler. See below code for example.
+- Annotations are used to provide supplemental information about a program. 
+- Annotations start with ‘@’.
+- Annotations do not change the action of a compiled program.
+- Annotations help to associate metadata (information) to the program elements i.e. instance variables, constructors, methods, classes, etc.
+- Annotations are not pure comments as they can change the way a program is treated by the compiler. See below code for example.
 
-3)
 How annotation prevent us from logical error?
+```java
 class A{
         public void show(){
             System.out.println("In A");
@@ -2847,37 +2880,35 @@ class A{
    // if you are thinking I can override display() method but you should defined new method but whenever you mention @override compiler throw error that you are not override the parent class method 
     //it helps to avoid the logical error in the program because logical error is more difficult to find when you use annotation it helps to find the logical error
     //because solving problem at compile time error  is easy than solving problem at runtime 
+```
 
  
   }
 
-
-
   In this lecture, we are discussing functional interface:
-#1 what is functional Interface?
- --functional interface is an interface with only one abstract method 
+ - what is functional Interface?
+    functional interface is an interface with only one abstract method 
  
-#2
-The properties of a functional interface in Java are as follows:
+- The properties of a functional interface in Java are as follows:
 
-Single Abstract Method: A functional interface has only one abstract method. 
+- Single Abstract Method: A functional interface has only one abstract method. 
 This method is the signature of the interface and defines the behaviour that will be implemented in the lambda expression or with simple class.
 
-Functional Method: The abstract method of a functional interface is called the functional method. 
+- Functional Method: The abstract method of a functional interface is called the functional method. 
 It is the method that provides the functional behaviour of the interface.
 
-@FunctionalInterface Annotation: A functional interface is annotated with the @FunctionalInterface annotation.
+- @FunctionalInterface Annotation: A functional interface is annotated with the @FunctionalInterface annotation.
 This annotation is optional, but it provides a compile-time check that the interface has only one abstract method.
 
-Compatible with Lambda Expressions: A functional interface is compatible with lambda expressions. 
+- Compatible with Lambda Expressions: A functional interface is compatible with lambda expressions. 
 A lambda expression is a concise way of implementing the functional method of a functional interface.
 (This will discuss in next lecture of lambda expression).
 
-Functional interfaces are a key component of functional programming in Java, 
+- Functional interfaces are a key component of functional programming in Java, 
 and they are used extensively in the Java 8 Streams API and other Java libraries.
 
 
-#3 Example
+```java
 class Main{
     public static void  main(String []args){
 A obj = new B();
@@ -2910,24 +2941,25 @@ interface A{
     //void run(); //this will give error as it is a functional interface you cannot write two abstract method in this
 }
 
+```
 
-#1 what is lambda expression in java?
--- In Java, a lambda expression is a concise way to implement a functional interface. 
+- what is lambda expression in java?
+- In Java, a lambda expression is a concise way to implement a functional interface. 
    A functional interface is an interface that has only one abstract method, and it can be implemented using a lambda expression.
--- In the previous lecture we see that we are making a class or inner class to implement the functional interface 
+- In the previous lecture we see that we are making a class or inner class to implement the functional interface 
    but using lambda expression we do not need of new class and inner class to implement.
 
-#2 Properties of the lambda expression
+- Properties of the lambda expression
 Concise syntax: Lambda expressions provide a concise and expressive syntax for defining functional interfaces. 
 They allow you to define the behaviour of a functional interface in a single line of code.
 
-Functional programming: Lambda expressions are a key component of functional programming in Java. 
+- Functional programming: Lambda expressions are a key component of functional programming in Java. 
 They allow you to write code that is more declarative and expressive, and less verbose than traditional imperative code.
 
-No need for anonymous inner classes: Lambda expressions provide an alternative to anonymous inner classes, which are often 
+- No need for anonymous inner classes: Lambda expressions provide an alternative to anonymous inner classes, which are often 
 used to implement functional interfaces in Java. Lambda expressions are more concise and easier to read than anonymous inner classes.
 
-#3 example:
+```java
 
 class Main{
     public static void  main(String []args){
@@ -2975,22 +3007,28 @@ interface C{
   public void show(int i);
 }
 
+```
 
-#1
- -- if we have a functional interface 
+- if we have a functional interface 
+
+```java
   interface A{
    int add(int i, int j);
   }
+```
+
 in this case, we return int type from add a method for that we can write a lambda expression 
 in different ways.
--- if we have a single statement you do not need of curly braces
+- if we have a single statement you do not need of curly braces
+
 A obj1 =(i,j)- return i+j;
 
--- if we want to return something in a single statement, no need to mention the return keyword
+- if we want to return something in a single statement, no need to mention the return keyword
+```java
 A obj2 =(i,j)-i+j;
+```
 
-#2 
-Example:
+```java
  class Main{
     public static void main(String[] args){
         // Anonymous class with lambda expression 
@@ -3006,6 +3044,7 @@ Example:
  }
 
 
+```
 <br/>
 
 > [top](#java-cheatsheet)
