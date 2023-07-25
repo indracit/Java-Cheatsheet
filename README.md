@@ -44,8 +44,8 @@
 39. [Lesson 39 : Anonymous and abstract inner class](#39-anonymous-and-abstract-inner-class)
 40. [Lesson 40 : interface](#40-interface)
 41. [Lesson 41 : enum if else and switch](#41-enum-if-else-and-switch)
-42. [Lesson 42 : Anotations , Functional interface and lambda expression with return type](#24-stringbuffer--stringbuilder)
-43. [Lesson 43 : Exceptions , try catch blocks](#34-object-class---equals-tostring--hashcode)
+42. [Lesson 42 : Anotations , Functional interface and lambda expression with return type](#42-anotations--functional-interface-and-lambda-expression-with-return-type)
+43. [Lesson 43 : Exceptions , try catch blocks](#43-exceptions--try-catch-blocks)
 44. [Lesson 44 : throw ](#44-throw)
 45. [Lesson 45 : throws](#45-throws)
 46. [Lesson 46 : BufferedReader and Scanner , try with resources](#46-bufferedreader-and-scanner--try-with-resources)
@@ -2838,6 +2838,7 @@ Enum and Constructor:
 > [top](#java-cheatsheet)
 
 <br/>
+
 # 42. Anotations , Functional interface and lambda expression with return type
 
 What is Annotations?
@@ -3050,56 +3051,56 @@ A obj2 =(i,j)-i+j;
 > [top](#java-cheatsheet)
 
 <br/>
- # 43.  Exceptions , try catch blocks
 
- In this lecture we are discussing about Exception:
--- In java three types of errors that can occur during the execution of a program
+# 43.  Exceptions , try catch blocks
+
+- In this lecture we are discussing about Exception:
+- In java three types of errors that can occur during the execution of a program
+
    i) compile time error
    ii)logical error
    iii) run time error -- this can be called as Exception
-i)
-Compile-time errors:
-Compile-time errors are errors that occur during the compilation of the Java code. 
-These errors are caused by syntax errors, missing semicolons, or incorrect variable names, 
-among other things. If there are compile-time errors in your Java program, it cannot be compiled into bytecode, 
-and it cannot be executed.
 
-ii)
+
+Compile-time errors:
+- Compile-time errors are errors that occur during the compilation of the Java code. 
+- These errors are caused by syntax errors, missing semicolons, or incorrect variable names, among other things. If there are compile-time errors in your Java program, it cannot be compiled into bytecode,and it cannot be executed.
+
 Logical errors:
-Logical errors are errors that occur when the program runs correctly, but it does not produce the expected output. 
-These errors occur because of a mistake in the program's logic. For example, if a program is supposed to add two numbers 
-but instead multiplies them, it will produce the wrong output. Logical errors are more difficult to detect than compile-time 
-errors because the program runs without any error messages.
+
+- Logical errors are errors that occur when the program runs correctly, but it does not produce the expected output. 
+- These errors occur because of a mistake in the program's logic. For example, if a program is supposed to add two numbers 
+- but instead multiplies them, it will produce the wrong output. Logical errors are more difficult to detect than compile-time 
+- errors because the program runs without any error messages.
 
 Exceptions(Runtime error)
-Exceptions are errors that occur during the execution of the Java program. 
-Exceptions occur when something unexpected happens, such as trying to read from a file that does not exist or dividing by zero. 
-When an exception occurs, the program will terminate unless the exception is handled by an exception handler.
+- Exceptions are errors that occur during the execution of the Java program. 
+- Exceptions occur when something unexpected happens, such as trying to read from a file that does not exist or dividing by zero. 
+- When an exception occurs, the program will terminate unless the exception is handled by an exception handler.
 
 In Exception we have Checked and Unchecked Exception this topic is discussed in Exception hierarachy:
-a)
-Checked Exception:
-Checked exceptions are exceptions that the Java compiler requires you to handle or declare. 
-These exceptions are checked at compile time, and you must either handle the exception with a try-catch block or declare it with a throws clause. 
-If you do not handle or declare a checked exception, the code will not compile. Checked exceptions are typically related to input/output operations, 
-such as file handling or network communication.
 
-b)
+Checked Exception:
+
+- Checked exceptions are exceptions that the Java compiler requires you to handle or declare. 
+These exceptions are checked at compile time, and you must either handle the exception with a try-catch block or declare it with a throws clause. 
+- If you do not handle or declare a checked exception, the code will not compile. Checked exceptions are typically related to input/output operations, such as file handling or network communication.
+
 Unchecked Exception:
-unchecked exceptions are exceptions that are not checked at compile time. These exceptions are typically caused by programming errors, 
-such as null pointer exceptions, array index out of bounds exceptions, and class cast exceptions. Unchecked exceptions are not required 
-to be handled or declared, but they can still occur during runtime.
+
+- unchecked exceptions are exceptions that are not checked at compile time. These exceptions are typically caused by programming errors, 
+- such as null pointer exceptions, array index out of bounds exceptions, and class cast exceptions. Unchecked exceptions are not required to be handled or declared, but they can still occur during runtime.
 
 Important:
-both checked and unchecked exceptions can occur during runtime, but checked exceptions are checked at compile time and require handling 
-or declaring, while unchecked exceptions are not checked at compile time and do not require handling or declaring.
+- both checked and unchecked exceptions can occur during runtime, but checked exceptions are checked at compile time and require handling or declaring, while unchecked exceptions are not checked at compile time and do not require handling or declaring.
   
-  In this lecture we are discussing how to handle exception using try-catch:
--- Exception handling is a mechanism in Java that allows developers to handle 
-and recover from errors and exceptional conditions that may occur during the execution of a program. 
--- One way to handle exceptions in Java is by using the try-catch block.
+- In this lecture we are discussing how to handle exception using try-catch:
+- Exception handling is a mechanism in Java that allows developers to handle and recover from errors and exceptional conditions that may occur during the execution of a program. 
+- One way to handle exceptions in Java is by using the try-catch block.
 
 General Syntax of try -catch to handle exception:
+
+```java
 try {
     // code that may throw an exception
 } catch (ExceptionType1 e1) {
@@ -3110,10 +3111,12 @@ try {
     // optional block of code that is executed regardless of whether an exception was thrown or not
 }
 
-we will discussing about everything try, catch ,finally and ExceptionType one by one
--- in this lecture we are only deal with single catch statement with try
+```
+we will discussing about everything try, catch ,finally and ExceptionType one by one 
+- in this lecture we are only deal with single catch statement with try
 
 
+```java
 //  try to handle the exception 
 class Main{
       public static void main(String[] args) {
@@ -3141,30 +3144,34 @@ class Main{
       }
    
 }
--- In the above code, the try block contains the code that may throw an exception. 
+```
+
+- In the above code, the try block contains the code that may throw an exception. 
 The catch block catches the exception of a specific type and handles it. 
 
 
--- statemtns of two types
- i)normal statements
- Normal Statements:
+- statemtns of two types
+
+i) normal statements
 Normal statements are statements that do not require any special handling, and they are executed in a normal sequence.  
 e.g Variable declarations and assignments: These statements are used to declare and assign values to variables.
 
- ii)critical statements
-Critical statements are statements that can cause an exception or error, and they require special handling.  
+ii) critical statements
+- Critical statements are statements that can cause an exception or error, and they require special handling.  
+
 Handle using :
-throw statements: These statements are used to throw an exception.
-try-catch statements: These statements are used to handle exceptions.
-finally statements: These statements are used to specify a block of code that is always executed, whether an exception is thrown or not.
+
+- throw statements: These statements are used to throw an exception.
+- try-catch statements: These statements are used to handle exceptions.
+- finally statements: These statements are used to specify a block of code that is always executed, whether an exception is thrown or not.
 
 In this lecture we are discussing about try with multiple catch:
- --In Java, the try-catch block is used to handle exceptions. It allows you to write code that handles exceptions that may be thrown during the execution of your program. 
- we can also handle different types of exceptions with multiple catch blocks.
 
- -- suppose we write few lines of code and we donot know which line can generate exception but 
- we know donot which types of exception can be generated. In this case we can use try with multiple catch 
- e.g
+- In Java, the try-catch block is used to handle exceptions. It allows you to write code that handles exceptions that may be thrown during the execution of your program. we can also handle different types of exceptions with multiple catch blocks.
+
+- suppose we write few lines of code and we donot know which line can generate exception but we know donot which types of exception can be generated. In this case we can use try with multiple catch 
+ 
+```java
 
  int num=4;
  int arr[]={3,4,5};
@@ -3180,15 +3187,15 @@ In this lecture we are discussing about try with multiple catch:
    System.out.println(aio);
  }
 
-#
-Handling parents and child Exception both
--- when catching both child and parent exceptions in a try-catch block, it is generally recommended to catch the child 
-   exceptions before the parent exception.
+```
 
--- The reason for this is that if you catch the parent exception before the child exception, the catch block for the parent exception will also catch any child exceptions that are subclasses of the parent exception. 
+Handling parents and child Exception both
+- when catching both child and parent exceptions in a try-catch block, it is generally recommended to catch the child exceptions before the parent exception.
+
+- The reason for this is that if you catch the parent exception before the child exception, the catch block for the parent exception will also catch any child exceptions that are subclasses of the parent exception. 
 This can make it more difficult to handle the child exceptions separately.
 
-e.g 
+```java
 int a = 10;
 int arr[]={3,4,5};
 try{
@@ -3200,11 +3207,14 @@ catch(Exception e){
 }
 catch(ArithmeticException e){
  }
+```
 
--- this will give compile time error i.e error: exception ArithmeticException has already been caught by Exception class
+- this will give compile time error i.e error: exception ArithmeticException has already been caught by Exception class
 
 Right way:
-first child Exception then parents Exception  
+first child Exception then parents Exception 
+
+```java
 int a = 10;
 int arr[]={3,4,5};
 try{
@@ -3217,28 +3227,31 @@ catch(Exception e){
    System.out.print("parent class of every exception");
 }
 
+``` 
 
 In this lecture we are discussing about hierarachy of exception:
--- In Java, exceptions are objects that represent exceptional situations that can occur during program execution. 
-The Java language provides a hierarchy of exception classes that are used to represent different types of errors and exceptional situations.
+- In Java, exceptions are objects that represent exceptional situations that can occur during program execution. 
+- The Java language provides a hierarchy of exception classes that are used to represent different types of errors and exceptional situations.
 
-#Important points
--- Every class extends Object class so, Throwable class by default extends Object
--- The top-level class in the Java exception hierarchy is the Throwable class. All exception classes in Java are subclasses of the Throwable class.
--- The Throwable class has two subclasses: Error and Exception. 
--- The Error class represents serious errors that cannot be handled by the program, such as OutOfMemoryError or StackOverflowError.
--- The Exception class represents exceptions that can be caught and handled by the program.
--- The Exception class has many subclasses that represent specific types of exceptions. Some common subclasses of Exception include RuntimeException, IOException, SQLException, and NullPointerException.
--- Exception classes in Java can be either checked or unchecked.
+# Important points
+- Every class extends Object class so, Throwable class by default extends Object
+- The top-level class in the Java exception hierarchy is the Throwable class. All exception classes in Java are subclasses of the Throwable class.
+- The Throwable class has two subclasses: Error and Exception. 
+- The Error class represents serious errors that cannot be handled by the program, such as OutOfMemoryError or StackOverflowError.
+- The Exception class represents exceptions that can be caught and handled by the program.
+- The Exception class has many subclasses that represent specific types of exceptions. Some common subclasses of Exception include RuntimeException, IOException, SQLException, and NullPointerException.
+- Exception classes in Java can be either checked or unchecked.
 
 Checked Exception:
-Checked exceptions are those that are checked at compile-time, meaning the compiler ensures that the programmer handles the exception by either catching or declaring it in the method signature using the throws keyword. 
-Examples of checked exceptions include IOException, SQLException, and ClassNotFoundException.
+
+- Checked exceptions are those that are checked at compile-time, meaning the compiler ensures that the programmer handles the exception by either catching or declaring it in the method signature using the throws keyword. 
+- Examples of checked exceptions include IOException, SQLException, and ClassNotFoundException.
 
 UnChecked Exception:
-unchecked exceptions are not checked at compile-time, and the compiler does not force the programmer to handle them. Examples of unchecked exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and
+- unchecked exceptions are not checked at compile-time, and the compiler does not force the programmer to handle them. Examples of unchecked exceptions include NullPointerException, ArrayIndexOutOfBoundsException, and
 ArithmeticException.
 
+```java
 hierrachry of exception
       Object class
             |
@@ -3253,6 +3266,8 @@ Error               Exception
             NullPointerException
             ArrayIndexOutOfBoundsException 
 
+```
+
 <br/>
 
 > [top](#java-cheatsheet)
@@ -3263,14 +3278,15 @@ Error               Exception
 # 44.  throw
 
 
-#1 
--- throw keyword in Java is used to explicitly throw an exception. 
+- throw keyword in Java is used to explicitly throw an exception. 
 When an exception is thrown using the throw keyword, the execution of the current method is stopped.
 
 syntax-
+
+```java
 throw new NullPointerException("Object is null");
 
-e.g
+
 public void divide(int a, int b) {
   if (b == 0) {
     throw new ArithmeticException("Cannot divide by zero");
@@ -3278,13 +3294,15 @@ public void divide(int a, int b) {
   int result = a / b;
   System.out.println(result);
 }
+```
 
 #2
--- throw keyword is used to throw exceptions, not to catch them. To catch exceptions, you need to use a try-catch block.
--- if you do not use try-catch then the control is passed, where the method is called.
--- when you want to pass message to an exception 
+- throw keyword is used to throw exceptions, not to catch them. To catch exceptions, you need to use a try-catch block.
+- if you do not use try-catch then the control is passed, where the method is called.
+- when you want to pass message to an exception 
 then you should use the parametrized constructor instead non parameterized constructor 
-e.g
+
+```java
 class Main{
    public static void main(String []args){
       int a=0;
@@ -3299,9 +3317,10 @@ throw new ArithmeticException("a should not be zero"); // throw new ArithmeticEx
    }
 }
 
+```
 Output: Exception caught: java.lang.ArithmeticException: a should not be zero
 
-
+```java
 class Main{
    public static void main(String[] args){
       int j=30;
@@ -3323,30 +3342,34 @@ class Main{
    }
 }
 
-#1
+```
+
 How to create custom exception in java?
 
+```java
 class MyException extends Exception{
    // this class is own exception class defined by according to our need
 }
 
--- MyException is a custom exception class that extends the Exception class.
+//MyException is a custom exception class that extends the Exception class.
+```
 
-#2
 Now we want to pass some message 
--- we need a constructor that takes a String message, which is passed to the parent constructor using the super keyword.
-e.g -
+- we need a constructor that takes a String message, which is passed to the parent constructor using the super keyword.
+
+```java
 public class MyException extends Exception {
     public MyException(String message) {
         super(message);
     }
 }
+```
 
 Note: we can add additional properties and methods to your custom exception class as needed, just like you would with any other Java class.
 
-#3
 As per need we can throw custom Exception
-e.g
+
+```java
 public class Main{
    public static void main(String []args){
       try{
@@ -3362,17 +3385,20 @@ public class Main{
       super(s);
    }
 }
+```
+
 
 Important Notes:
--- we can create a custom exception by extending the Throwable class in Java 
--- we can create a custom exception by extending the Exception class in Java
--- we can create a custom exception by extending  the Exception class or one of its subclasses, such as RuntimeException.
+- we can create a custom exception by extending the Throwable class in Java 
+- we can create a custom exception by extending the Exception class in Java
+- we can create a custom exception by extending  the Exception class or one of its subclasses, such as RuntimeException.
 
 Recommended:
--- Generally recommended to create custom exceptions by extending the Exception class or one of its subclasses, such as RuntimeException. 
+
+- Generally recommended to create custom exceptions by extending the Exception class or one of its subclasses, such as RuntimeException. 
 This makes it easier to handle your exception in a specific way and ensures that it behaves like other exceptions in the Java platform.
 
--- it is not recommended create custom exception using Throwable, the Throwable class is typically used to create other types of exceptions, 
+- it is not recommended create custom exception using Throwable, the Throwable class is typically used to create other types of exceptions, 
 such as errors and checked exceptions, rather than custom exceptions.
 
 
@@ -3384,23 +3410,17 @@ such as errors and checked exceptions, rather than custom exceptions.
 
 # 45. throws
 
-
-#1 
--- throws is not plural of throw 
--- throws keyword is used in method signatures to indicate that the method may throw certain types of exceptions.
+ 
+- throws is not plural of throw 
+- throws keyword is used in method signatures to indicate that the method may throw certain types of exceptions.
 but does not handle them directly
--- the caller of the method is responsible for catching and handling the exception.
+- the caller of the method is responsible for catching and handling the exception
+- Best case to use the throws keyword instead of handling with try and catch:
+- throws keyword can be an appropriate way to handle exceptions in certain cases, such as when a method is part of a larger program and the exception handling is being handled at a higher level. It can also be useful when creating reusable code that may be used in a variety of contexts, where it's not clear how the exceptions should be handled.
 
-#2
-Best case to use the throws keyword instead of handling with try and catch:
--- throws keyword can be an appropriate way to handle exceptions in certain cases, such as when a method is part of a larger 
-program and the exception handling is being handled at a higher level. It can also be useful when creating reusable code that may 
-be used in a variety of contexts, where it's not clear how the exceptions should be handled.
+- suppose you have three methods c , b and a and both have same Arithmetic Exception and b and a method call from c method.in this case you can duck the exceptions and handle in the c methods.
 
-e.g 
-suppose you have three methods c , b and a and both have same Arithmetic Exception and b and a method call from c method.
-in this case you can duck the exceptions and handle in the c methods.
-
+```java
 void c(){
 try{
 a();
@@ -3413,56 +3433,52 @@ catch(ArithmeticException e){
 void a() throws ArithmeticException{}
 void b() throws ArithmeticException{}
 
--- ducking exception most recommended for checked exception than unchecked exception
--- throws keyword in Java is typically used to declare that a method may throw one or more 
-checked exceptions. Checked exceptions are exceptions that must be either caught or declared in the method 
-signature using the throws keyword. Examples of checked exceptions in Java include IOException, SQLException, 
+```
+- ducking exception most recommended for checked exception than unchecked exception
+- throws keyword in Java is typically used to declare that a method may throw one or more checked exceptions. Checked exceptions are exceptions that must be either caught or declared in the method signature using the throws keyword. Examples of checked exceptions in Java include IOException, SQLException, 
 and ClassNotFoundException.
 
 
 Syntax to throws one or more Exception:
 
+```java
 public void myMethod() throws IOException, SQLException {
   // Method code that may throw either an IOException or a SQLException
 }
+```
 
  
- Important: it's best to handle exceptions at the lowest possible level of the code where 
+Important: it's best to handle exceptions at the lowest possible level of the code where 
 
-suppose we have main() method inside main method we call c() method and inside c method we call a() method and in 
-a() method exception originate and we cannot handle with try and catch then propagate to c() method and if not handled propagate to 
-main method and if not handled in main method then the default exception handler handles the exception and abnormally terminate the program.
+- suppose we have main() method inside main method we call c() method and inside c method we call a() method and in  a() method exception originate and we cannot handle with try and catch then propagate to c() method and if not handled propagate to main method and if not handled in main method then the default exception handler handles the exception and abnormally terminate the program.
 
 
-#3 
-In java how exceptions propagate
-In Java, when an exception is thrown but not handled by the current method, the exception is propagated up 
+- In java how exceptions propagate
+- In Java, when an exception is thrown but not handled by the current method, the exception is propagated up 
 the call stack until it is either caught and handled by a try-catch block, or it reaches the top level of 
 the program and the program terminates.
 
-The order of transferring unhandled exceptions in Java is as follows:
+- The order of transferring unhandled exceptions in Java is as follows:
 
 The current method throws an exception.
-i)If there is a try-catch block within the current method that can handle the exception, 
+
+- If there is a try-catch block within the current method that can handle the exception, 
 the exception is caught and handled within that block. Control then passes to the code 
 following the catch block.
 
-ii)If there is no try-catch block within the current method that can handle the exception, 
+- If there is no try-catch block within the current method that can handle the exception, 
 the exception is propagated up to the calling method.
 
-iii)Steps 2 and 3 repeat until either the exception is caught and handled by a try-catch block, 
+- Steps 2 and 3 repeat until either the exception is caught and handled by a try-catch block, 
 or it reaches the top level of the program.
 
-iv)If the exception reaches the top level of the program without being caught and handled,
+- If the exception reaches the top level of the program without being caught and handled,
 
-v)in this case 
-If an exception is not handled by any method in the call stack, and there is no catch block that can handle the exception, 
-then the default exception handler in Java is called to handle the exception.
+- in this case  If an exception is not handled by any method in the call stack, and there is no catch block that can handle the exception,  then the default exception handler in Java is called to handle the exception.
 
--- default exception handler in Java is part of the JVM (Java Virtual Machine) and is responsible for printing the exception 
-information to the console or to a log file, and terminating the program.
+- default exception handler in Java is part of the JVM (Java Virtual Machine) and is responsible for printing the exception  information to the console or to a log file, and terminating the program.
 
--- the default exception handler is called, it prints a stack trace that shows the sequence of method calls that led up to the exception, 
+- the default exception handler is called, it prints a stack trace that shows the sequence of method calls that led up to the exception, 
 as well as any other relevant information about the exception
 
 <br/>
@@ -3475,13 +3491,14 @@ as well as any other relevant information about the exception
 
 
 How to take input in java?
-#1
+
 using System.in.read()
--- using System.in.read() we can take single character input only, if we provide multiplecharacterr
+- using System.in.read() we can take single character input only, if we provide multiplecharacterr
  itconsidersr the firstcharacterr of enter sequence.
 
--- if we want to show result of multiple character we can use loop (not in video lecture forcuriosityy)
-e.g 
+- if we want to show result of multiple character we can use loop (not in video lecture forcuriosityy)
+
+```java
  class Main{
 public static void main(String[] args) throws Exception{
    int i =System.in.read(); // read a byte from the keyboard
@@ -3519,10 +3536,13 @@ System.out.println(n);
 
    }
  }
+```
+
 using InputStreamReader class:
-In Java, the InputStreamReader class is used to read data from an input stream and convert it into characters. 
-It is often used with the BufferedReader class, which provides a buffered way to read characters from an input stream.
-e.g 
+- In Java, the InputStreamReader class is used to read data from an input stream and convert it into characters. 
+- It is often used with the BufferedReader class, which provides a buffered way to read characters from an input stream.
+
+```java
 class Main{
 public static void main(String[] args) {
         BufferedReader br = null;
@@ -3552,27 +3572,31 @@ public static void main(String[] args) {
         }
     }
 }
+```
+
 Note: if open the resource then close is important 
 
 Use of Scanner Class : 
-To make programmer life easy 
-Scanner class was introduced in Java 1.5 as part of the Java API  to provide an easy way 
-to read user input from various sources such as the keyboard.
+- To make programmer life easy Scanner class was introduced in Java 1.5 as part of the Java API  to provide an easy way to read user input from various sources such as the keyboard.
 
-a) Reading input through keyboard:
--- import java.util.Scanner;  need to import in java file 
+- Reading input through keyboard:
+
+```java
+- import java.util.Scanner;  // need to import in java file 
 
 Scanner scanner = new Scanner(System.in);
 System.out.print("Enter your name: ");
 String name = scanner.nextLine();
 System.out.println("Hello, " + name + "!");
 
--- Scanner object using the System.in input stream, which represents the keyboard. 
+```
+- Scanner object using the System.in input stream, which represents the keyboard. 
 We then use the nextLine() method to read a line of text entered by the user.
 
 Important: From here this part is not in video, for your cursoity we are put only in this description.
 
-b) read through file 
+- read through file 
+```java
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -3587,10 +3611,13 @@ try {
 } catch (FileNotFoundException e) {
     System.out.println("File not found: " + e.getMessage());
 }
-we create a Scanner object using a File object that represents the input file. 
-We then use the hasNextLine() and nextLine() methods to read each line of text from the file.
+```
 
-c) Read input though String
+- we create a Scanner object using a File object that represents the input file. We then use the hasNextLine() and nextLine() methods to read each line of text from the file.
+
+- Read input though String
+
+```java
 import java.util.Scanner;
 
 String input = "156 2 3 4 5";
@@ -3599,19 +3626,22 @@ while (scanner.hasNextInt()) {
     int number = scanner.nextInt();
     System.out.println(number);
 }
--- Scanner object using a String object that contains the input. We then use the hasNextInt() and nextInt() methods to read each integer from the string.
+
+```
+
+- Scanner object using a String object that contains the input. We then use the hasNextInt() and nextInt() methods to read each integer from the string.
 
 
 In this lecture we are discussing about try with resources:
--- first question in mind is what is try with resources
--- answer to close the resource 
--- ok, second question - can we close resources without try with resource 
--- then, we come to use try with resources 
+- first question in mind is what is try with resources
+- answer to close the resource 
+- ok, second question - can we close resources without try with resource 
+- then, we come to use try with resources 
 
-#1 use of try with finally without catch (it is possible to use try with finally without catch)
--- try statement can be used along with the finally clause to ensure that a resource is properly closed or released, 
-regardless of whether an exception is thrown or not.
+use of try with finally without catch (it is possible to use try with finally without catch)
+- try statement can be used along with the finally clause to ensure that a resource is properly closed or released, regardless of whether an exception is thrown or not.
 
+```java
 BufferedReader br = null;
            try {
                // create a new InputStreamReader to read from System.in
@@ -3630,13 +3660,13 @@ BufferedReader br = null;
              br.close();   //finally used to close the resources  regardless Excpetion occur or not  
 }
 
+```
+
 Note : finally always execute either exception occured or not  so that it is  used to close the resources.
 
-#2
-try with resource 
-try-with-resources statement, we can simplify this code and avoid the need for a finally block:
+- try with resource : try-with-resources statement, we can simplify this code and avoid the need for a finally block:
 
-e.g
+```java
 BufferedReader br = null;
            try(br = new BufferedReader(new InputStreamReader(System.in))) {
                System.out.println("Enter your name:");
@@ -3650,15 +3680,16 @@ BufferedReader br = null;
     }
         
 }
+```
 
-Important: this portion are not in the video, it is for those who are curious to learn more about exception handling
-#3 try with with multiple resource 
--- In Java, you can use the try-with-resources statement to close multiple resources automatically. 
+- Important: this portion are not in the video, it is for those who are curious to learn more about exception handling 
+try with with multiple resource 
+- In Java, you can use the try-with-resources statement to close multiple resources automatically. 
    The try-with-resources statement is a feature introduced in Java 7 that allows you to declare resources 
    within a try block and ensure that they are closed automatically when the block is exited, whether normally 
    or due to an exception.
 
-e.g
+```java
 try (Resource1 res1 = new Resource1();
      Resource2 res2 = new Resource2()) {
     // code that uses the resources
@@ -3666,38 +3697,31 @@ try (Resource1 res1 = new Resource1();
     // exception handling code
 }
 
--- Resource1 and Resource2 are classes that implement the AutoCloseable interface, 
-which allows them to be used in the try-with-resources statement. 
+```
 
--- The code within the try block uses these resources, and they are automatically closed when the block is exited, 
-either normally or due to an exception. If an exception is thrown, the catch block can handle it as necessary.
+- Resource1 and Resource2 are classes that implement the AutoCloseable interface, which allows them to be used in the try-with-resources statement. 
 
--- Resource1 and Resource2 are declared and instantiated within the try-with-resources statement. If the resources are 
-already instantiated before the try block, we can simply pass them as arguments to the statement.
+- The code within the try block uses these resources, and they are automatically closed when the block is exited, either normally or due to an exception. If an exception is thrown, the catch block can handle it as necessary.
 
--- the resources are closed automatically when the try block is exited, 
+- Resource1 and Resource2 are declared and instantiated within the try-with-resources statement. If the resources are already instantiated before the try block, we can simply pass them as arguments to the statement.
+
+- the resources are closed automatically when the try block is exited, 
 and there's no need to explicitly call their close() methods.
 
-In multiple statement inside try, order of closing resources:
--- Resources declared within a try-with-resources statement are closed in 
-the reverse order of their declaration, from right to left. 
+- In multiple statement inside try, order of closing resources: Resources declared within a try-with-resources statement are closed in the reverse order of their declaration, from right to left. 
 
-
--- Resource1 is declared first, followed by Resource2, and then Resource3. 
-When the try block is exited, the resources will be closed in the following order:
+- Resource1 is declared first, followed by Resource2, and then Resource3. When the try block is exited, the resources will be closed in the following order:
 
 Resource3
 Resource2
 Resource1
 
--- order is reversed from the order of declaration, with the resource declared last (Resource3) being closed first, 
-and the resource declared first (Resource1) being closed last.
+- order is reversed from the order of declaration, with the resource declared last (Resource3) being closed first,  and the resource declared first (Resource1) being closed last.
 
 Important: 
-It's important to note that the order of resource declaration matters when using try-with-resources, 
+- It's important to note that the order of resource declaration matters when using try-with-resources, 
 especially if the resources are dependent on each other. For example, if Resource2 depends on Resource1 and 
-Resource3 depends on both Resource1 and Resource2, then they should be declared in the correct order to avoid any 
-potential issues during closing.
+Resource3 depends on both Resource1 and Resource2, then they should be declared in the correct order to avoid any potential issues during closing.
 
 
 <br/>
@@ -3708,49 +3732,45 @@ potential issues during closing.
 
 
 # 47. Thread class
-    #1
+
 - When you run an application, the software that you have written will be running on an OS( Operating System).
 - Below the OS, a layer is present that is known as Hardware.
 - Software will always run on hardware.
 - Hardware consists of:
  RAM - acts as a temporary memory for processing
  CPU - that executes something (processing done here)
-- OS supports multiple software working at the same time and it means it supports Multitasking.
-- Multitasking:
-Multitasking is the ability of the CPU to perform multiple tasks simultaneously. There will be continuous context switching of the CPU between the tasks.
-- CPU has a concept of time sharing which means each process runs for some short period of time one by one. The software runs parallelly by sharing the time in the CPU. 
 
-#2
+- OS supports multiple software working at the same time and it means it supports Multitasking.
+
+- Multitasking:
+    Multitasking is the ability of the CPU to perform multiple tasks simultaneously. There will be continuous context switching of the CPU between the tasks.
+- CPU has a concept of time sharing which means each process runs for some short period of time one by one.
+ The software runs parallelly by sharing the time in the CPU. 
+
 - We can also divide our tasks into small units.
 - In the same task or a program, we can have multiple threads running at the same time.
 - Thread is light-weight and it is the smallest unit of a task. 
+
 - Multithreading:-
 Multithreading is a system in which many threads are created from a process through which the computer power is increased. 
 
-#1
-When you build an application, we use certain frameworks and behind the scene, these frameworks will create threads.
+- When you build an application, we use certain frameworks and behind the scene, these frameworks will create threads.
 - Every statement runs in a sequence in the main method.
 - If you want to execute two behaviours to execute at the same time, then we can use threads.
 - We can not execute normal objects in multiple threads or normal objects can not be executed simultaneously.
 
-#2
 - Java provides a Thread class to achieve thread programming. The thread class provides constructors and methods to create and perform operations on a thread.
 - A thread can be created by extending the thread class. The thread class can be extended through the Thread keyword.
 - By using the Thread keyword with class, it will not create a new thread.
 
-#3
 - We have to use the start() method in the main to start the execution of a new thread.
- - start() is a method that is present inside the thread class. start() method only calls the run method.
+- start() is a method that is present inside the thread class. start() method only calls the run method.
 - Start() invokes the run() method on the Thread object.
 - run method should be present inside every thread to start a new thread.
 - run() method is used to do an action for a thread.
-
-#4
 - All threads cannot run at the same time, so threads go for the time sharing.
--In this time-sharing Operating system, many processes are allocated with computer resources in respective time slots. 
+- In this time-sharing Operating system, many processes are allocated with computer resources in respective time slots. 
 - Scheduler is responsible to allow which thread to execute at what time.
-
-#1
 - We cannot control the schedular, we can only give suggestions to it to give priority.
 - getPriority() is a method that gives the current priority of a thread.
 - The range of priority goes from 1 to 10. One is the least priority whereas ten is the maximum priority.
@@ -3758,14 +3778,11 @@ When you build an application, we use certain frameworks and behind the scene, t
 - We can also change the priority by using the setPriority().
 - Different schedulers have different algorithms to work upon so by giving priority, we can only give suggestions to it. 
 - It might be possible that the scheduler gives the highest priority to the process that will execute in less time at the running phase.
-
-#2
 - We can also make a thread to wait for some time and then execute the statement further.
 - Thread will wait by using the sleep() method.
 - In the sleep() method, we have the pass value for how much time we want a thread to wait. The time will be in milliseconds.
 - Sleep() method will throw an interrupted exception. So, we can handle an exception by using the try-catch block.
 - When we use sleep(), then the thread goes into the waiting state.
-
 - As a programmer, we can not control a thread, we can only optimise it.
 
 
@@ -3779,10 +3796,11 @@ When you build an application, we use certain frameworks and behind the scene, t
 
 # 48. Runnable interface
 
-#1
-Multiple Inheritance is not supported by Java. So, extending a thread is not a good practice to follow.
+- Multiple Inheritance is not supported by Java. So, extending a thread is not a good practice to follow.
 - Thread is a class that implements Runnable and Runnable contains a method known as the run() method.
 - Instead of extending a thread, we can also implement it through an interface called Runnable.
+
+```java
  class A implements Runnable
  {
   public void run()
@@ -3791,7 +3809,7 @@ Multiple Inheritance is not supported by Java. So, extending a thread is not a g
   }
  }
 
-#2
+```
 - In the Runnabe method, the start() method is not present so we can not use it by implementing Runnable simply.
 - Thread has multiple constructors and one of the constructors takes a runnable object.
 - We cannot create an object of a thread by using a class name.
@@ -3799,14 +3817,10 @@ Multiple Inheritance is not supported by Java. So, extending a thread is not a g
 e.g., Runnable obj= new A();
 - We have to pass a reference to an object in the thread class.
 - After creating a reference of the Runnable class, we can use the start() method with the thread.
-
-#3
 - We can create a thread by using two methods:
  1. Extend a thread class
  2. Implement a Runnable interface
-The runnable interface does not have thread methods, in that case, we need to create a separate thread object to use features.
-
-#4 
+- The runnable interface does not have thread methods, in that case, we need to create a separate thread object to use features.
 - We can also instantiate a runnable interface by using an anonymous class.
 - Runnable is a functional interface so we also use lambda expression with it.
 
@@ -3819,7 +3833,6 @@ The runnable interface does not have thread methods, in that case, we need to cr
 
 # 49. race condition
 
-#1 
 Threads and Mutations:
 - Threads are useful when you want to execute multiple things at the same time.
 - Most of the time, threads are created by the framework itself.
@@ -3830,8 +3843,6 @@ Threads and Mutations:
 - Strings are immutable as we cannot change their value of it.
 - Use of threads and mutations at the same time is not good, as it creates instability in the code.
 
-
-#2 
 Thread Safe:
 Thread safe means that only one thread will work at one point.
 - When a thread is already working on an object and preventing another thread from working on the same object, this process is called Thread-Safety.
@@ -3840,7 +3851,6 @@ Thread safe means that only one thread will work at one point.
 - This happens because the main method prints the value of the count at any moment of time, it does not wait for threads to execute completely and come back to the main method.
 - If the main method waits for threads to execute and to come back after completion, then it gives nearby correct output.
 
-#3 
 join method and synchronized keyword:
 - join() is a method that allows the main method to wait for the other threads to come back and join.
 - join through an exception so we have to handle it by using throws Interruption.
@@ -3850,12 +3860,10 @@ join method and synchronized keyword:
 - So, if a thread is working with the synchronized method, then the other thread has to wait to work with that method until the first thread gets completed.
 - Synchronization in java is the capability to control the access of multiple threads to any shared resource. 
 
-#4 
 Race condition:
 - Synchronization helps to prevent the race condition.
 - Race condition is a condition in which the critical section (a part of the program where shared memory is accessed) is concurrently executed by two or more threads. It leads to incorrect behaviour of a program.
 
-#1
 - Every time you create a new thread that goes into a new state.
 - When you start a thread, it goes into the Runnable state.
 When the thread is executing and then it is waiting for the schedular, it is in a runnable state.
@@ -3867,8 +3875,7 @@ A thread goes in the running state only when it gets informed by the schedular t
 - You can stop the execution of a thread by using a stop() method, and then it will go into the Dead State.
 When the work of a thread gets over, then it will go into the dead state automatically.
 
-
-#2
+```java
   start()    notify()
 New -----------} Runnable  {------------
     | |         |  
@@ -3881,6 +3888,7 @@ New -----------} Runnable  {------------
     |_______________|
       stop()
 
+```
 <br/>
 
 > [top](#java-cheatsheet)
@@ -3902,31 +3910,29 @@ In Java, collection consists of:
 - We use data structures to store and fetch the data.
 - Collection API is used in the java 1.2 version where you can work with all data structures by using some in-built classes.
 
-#2
 - We can use an array, where the length will be fixed. We cannot expand the size of an array.
 - Wherever we have a specific requirement for different algorithms and structures, we can use collection API.
 
-#1
-The collection interface belongs to java.util.Collection package. All classes and methods of collection interface belong to this java.util package.
+- The collection interface belongs to java.util.Collection package. All classes and methods of collection interface belong to this java.util package.
 - API means a library or some features that we can use directly, we do not need to define an implementation for it.
 - Collections List, Queue, Map and Set simply extend the Collection interface and this collection interface must have its own class implementation.
 - we can also convert a collection into an array.
 - ArrayList is used like:
+
+```java
  Collection nums=new ArrayList(); 
  nums.add(6);
+```
+
 - We can add values in a collection by using the add() method.
--- We do not have indexing for the collection API.
+- We do not have indexing for the collection API.
 - In the array, we need to specify its type of it. While Collection API works with objects.
 - All the data types classes like integer and float extend an object class and thus collection API directly use an object.
-
-#2
 - To define the data types in collection API, we use Generics.
 - You can define the type of an object to which data type class it belongs in angular brackets like:
  Collection(Integer) nums= new ArrayList Integer ();
 - Here, we use Integer as it is a class, while int is a primitive data type.
 - If we do not specify the datatype of a collection object, then it will give a run-time error.
-
-#3
 - ArrayList is a class that implements a list. The list does not have a method called get because it list works with an index in the values.
 -  It uses a dynamic array to store the duplicate element of different data types. 
 - The ArrayList class maintains the insertion order and is non-synchronized. 
@@ -3937,40 +3943,32 @@ The collection interface belongs to java.util.Collection package. All classes an
 - If you want to work with an index value, you should use List as it supports index values.
  List Integer  nums= new ArrayList Integer ();
 
-#4 Advantages of Collection Framework:
+Advantages of Collection Framework:
 - Consistent API
 - Reduces programming efforts
 - Increases program speed and quality
-
-#1
-The collection interface is also extended by the set interface.
+- The collection interface is also extended by the set interface.
 - List in the collection supports repeated values. The set is an interface in Collection that supports only unique values.
 - Package set in the collection is java.util.Set;
 - Set extends collection but the class which implements set is different and the class name is HashSet.
 - We can define its datatype through generics as well such as greater then bracket  Integer less then bracket
-
-#2
 - Set also uses the add() method to insert the values in a set.
 - Set does not print the repeated values. It prints the same value only one time.
 - Set does not maintain the sequence, it gives values in any random order. The set does not sort the values
 - Set also does not support an index for values.
-
-#3
 - Instead of using the class HashSet, if we will use the TreeSet, it will give values in sorted order.
- 
 - All the elements in a TreeSet are sorted as it extends AbstractSet and implements NavigableSet and further NavigableSet extends Sorted Set.
-
-
-#4
 - Collection interface extends an Iterable interface through which we can iterate between the elements by using enhanced for loop, etc.
 - Iterable interface contains a method called iterator().
 - Iterator returns an iterator object that got all the values from a set. It can be in place of loops.
-
 - It has also a method called next() that gives the values of the next element.
 -  It has a method hasNext() that helps the loop to know that the set contains a value of the next element.
+
+ ```java
  while(values.hasNext())
   System.out.println(values.next());
 
+ ```
 
 <br/>
 
@@ -3980,12 +3978,9 @@ The collection interface is also extended by the set interface.
 
 # 51. Map - HashMap, HashTable
 
-#1
 - Map is not an implementation or it does not extend the collection interface. But it is a part of the collection concept.
- - Map is a collection of key-value pairs. in this, for every value of an element, a key is associated with it.
+- Map is a collection of key-value pairs. in this, for every value of an element, a key is associated with it.
 - Map itself is in an interface that supports key-value pairs. A class that implements it is called HashMap.
-
-#2
 - We can add elements in a map using the put() method that accepts both the key and value of it.
 - We can get the value of an element by specifying its key of it in the get() method.
 - Keys are unique but values can be repeated. The value of a key can also be updated.
@@ -3993,8 +3988,6 @@ The collection interface is also extended by the set interface.
 - We can get all the keys by using the method keySet().
 - We can get the value of a key by using the method get() and pass a parameter as a key in the method.
 - remove() method is used to delete a particular element or an entity from a map.
-
-#3
 - We can also use a HashTable instead of using a HashMap.
 - The difference between HashMap and HashTable is that HashTable is synchronized while HashMap is normal.
 - If you are working with multiple threads at a time, then it is better to use a HashTable to make it synchronized.
@@ -4006,9 +3999,8 @@ The collection interface is also extended by the set interface.
 <br/>
 
 # 52. Comparator & Comparable
-#1
+
 - From the Java 1.7 version, it is not compulsory to mention the generic type on the right-hand side if you have already mentioned it on the left-hand side.
- 
 - A collection class has lots of methods. The collection class belongs to the util package.
 - We can sort a list or an ArrayList by using the method sort of collection class
  Collections.sort();
@@ -4017,6 +4009,8 @@ The collection interface is also extended by the set interface.
 - We have a method called compare() in the comparator interface.
 - We can use an interface by implementing a class or through an anonymous class.
 - Compare method works on an algorithm where it compares two values and then swaps them.
+
+```java
  Comparator Integer com= new Comparator Integer()
  {
   public int compare(Integer i, Integer j)
@@ -4024,26 +4018,26 @@ The collection interface is also extended by the set interface.
    statements;
   }
  };
+```
 - So, a comparator is an interface through which you can specify your own concept of sorting.
-
-#2
 - Integer class implements a Comparable interface. So by default, sort works for Integer.
 - If you want to do natural sorting on any other non-defined class, you can implement something called the Comparable.
 - Comparable is present in the lang package.
 - Comparable has a method known as compareTo(). 
 - You have to define the method comapreTo() in a class, that is implementing Comparable.
+
+```java
  class Student implements Comparable Student
  {
   public int compareTo( Student that){
    statements;
   }
  }
+```
 Here, that is a variable.
 - We can also override the logic by using Comparator even if we have implements the Comparable interface.
 - Lambda expression can also be used with Comparator as it is a functional interface.
-
- #3
-Difference between Comparable & Comparator:
+- Difference between Comparable & Comparator:
 - Comparable provides a single sorting sequence while the Comparator provides multiple sorting sequences.
 - In Comparable, actual gets modified while in Comparator, the original class does not get affected.
 - Comparable gives the compareTo() method for sorting while Comparator gives the compare() method to sort elements.
@@ -4060,39 +4054,27 @@ Difference between Comparable & Comparator:
 - Methods present inside the stream interface
 - Filter, Map and Reduce methods of stream
 - Use of methods in Big Data
-
-#1
 - Stream is an interface, it contains a stream() method.
 - Stream method return an object of type stream.
 - Any operation can be performed inside the stream method.
 - Any changes done inside the stream can be reflected on the actual list.
 - Once we work with a stream, we can't reuse it. We can work with a stream only once.
-
-#2
 - Stream provides a lot of methods to work upon.
 - filter() method returns a new Stream that contains the value which satisfies the given condition. The filter method is used to select elements as per the Predicate passed as an argument.
 - map() takes each value and performs operations on it. It returns a stream consisting of the results of applying the given function to the elements of this stream.
-- reduce() method does not return the stream but it gives the value of a type that you defined in the stream. It is used to reduce the elements of a stream to a single value.
-The reduce method takes a BinaryOperator as a parameter.
-
-#3
+- reduce() method does not return the stream but it gives the value of a type that you defined in the stream.It is used to reduce the elements of a stream to a single value. The reduce method takes a BinaryOperator as a parameter.
 - If you want to use Big Data, then first you have to apply a filter on it to separate useful data.
 - After applying a filter, you need to transform it into the required data with the help of a map.
 - And the graph of it, can be made with the help of the reduce method.
 - We can reduce the code by applying methods one after the other.
-
-#1
 - forEach method got introduced in Java 1.8 version.
 - The forEach() method of ArrayList is used to perform a certain operation for each element in ArrayList.
 - forEach traverses each element of the Iterable until all the elements have been processed.
 - Collection classes that extend the Iterable interface can use forEach loop to iterate elements.
-
-#2
 - forEach method takes an object of the consumer.
 - Consumer is an interface that belongs to the java.util.function package.
 - Consumer is a functional interface so lambda expression will also be applicable to it.
 - Consumer has a method accept(), that takes a value of the same type of which object is created.
-
 - forEach needs an object and we will pass an object of a consumer in it.
 - forEach gives a value at a time and that value gets passed to the consumer object and taken by the accept method.
 - We can do operations in this accept method.
